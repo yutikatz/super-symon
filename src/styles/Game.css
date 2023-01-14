@@ -88,3 +88,6 @@
 .input {
   --color: blue;
 }
+.native-input{
+  border: dashed 5px #7f7ffe !important
+}

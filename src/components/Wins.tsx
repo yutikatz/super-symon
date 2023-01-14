@@ -1,48 +1,35 @@
 import { IonGrid, IonRow, IonCol, IonTitle } from '@ionic/react';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import game from './../images/game.jpg';
-import React, { useState } from 'react'
-import { initialWins } from '../context/localStorage/reducer/LocalStorageRedux';
-import './../styles/Wins.css'
-let flagInit = false;
+import game from './../images/game.jpg'; 
+import { initialWins, winsList } from '../context/localStorage/reducer/WinsReducer';
+import './../styles/Wins.css';
+import  Player from './../model/Player';
+let flag = false;
+
 function Wins(props: any) {
-    const reduxState: any = useSelector((state) => (state as any).reducer);
     const dispatch = useDispatch();
-    const [myWins, setMyWins] = useState(reduxState.wins);
+    if (!flag) {
+
+        dispatch(initialWins());
+        flag = true;
+    }
+    const myWins: Player[] = useSelector(winsList);
 
     setTimeout(() => {
-        if (!flagInit) {
-            onInit();
-            flagInit = true;
-        }
+        onInit();
     }, 1000);
 
-    const updateNewWin = () => {
-        let property = props.location.state;
-        let wins = localStorage.getItem('wins');
-        if (!wins) {
-            (wins as any) = [property]
-            localStorage.setItem('wins', JSON.stringify(wins))
-        }
-        else {
-            let result: any = JSON.parse(wins);
-            result.push(property)
-            result.sort((a: any, b: any) => {
-                return b.score - a.score
-            })
-            if (result.length > 10) {
-                result.pop()
-            }
-            localStorage.setItem('wins', JSON.stringify(result))
-        }
+    const updateFlag = () => {
+        flag = false;
     }
-
     const onInit = () => {
         let property = props.location.state;
-        const getWinsFromState = () => dispatch(initialWins())
-        getWinsFromState();
-        setMyWins(reduxState.wins)
+
+        // console.log(winsState.wins);
+
+        //myWins = winsState.wins;
+        // setMyWins(winsState.wins)
         const rows = document.getElementsByClassName('row') as HTMLCollection;
         for (let row of rows as any) {
             const text = row.childNodes[0].children[0].innerText;
@@ -74,7 +61,7 @@ function Wins(props: any) {
                 </div>
                 <div className='home'>
                     <img src={game} className='home-img' alt="img didn't found" />
-                    <Link to={''} className='link'>
+                    <Link onClick={updateFlag} to={''} className='link'>
                         <span>Go to Home page</span>
                     </Link>
                 </div>

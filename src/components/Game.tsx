@@ -54,9 +54,9 @@ class Game extends React.Component {
                             onIonChange={(e: any) => this.changeValue(e.target.value)}
                             placeholder='Init user name'
                         ></IonInput>
-                        <Link to={(this.state as any).userName ? { pathname: 'wins', state: (this.state as any).userName } : {}} >
-                            <IonButton className='submit' onClick={
-                                this.stopShowModal} disabled={!(this.state as any).userName}> Submit
+                        <Link onClick={this.stopShowModal }  
+                                  to={(this.state as any).userName ? { pathname: 'wins', state: (this.state as any).userName } : {}} >
+                            <IonButton className='submit' disabled={!(this.state as any).userName}> Submit
                             </IonButton>
                         </Link>
                     </IonModal>

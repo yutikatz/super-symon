@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducer from "./LocalStorageRedux";
+import winsReducer from './WinsReducer';
 
 export default configureStore({
     reducer: {
-        reducer: reducer
+        wins: winsReducer
     }
 });
