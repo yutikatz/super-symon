@@ -3,14 +3,14 @@
   background-color: blue;
 }
 
-#ball3 {
-  margin: 46.02vh 41vw;
-  background-color: red;
-}
-
 #ball2 {
   margin: 20.81vh 45.674vw;
   background-color: yellow;
+}
+
+#ball3 {
+  margin: 46.02vh 41vw;
+  background-color: red;
 }
 
 #ball4 {
@@ -27,14 +27,12 @@
 #wow {
   position: absolute;
   margin: 40.02vh 47.682vw;
-  background-color: azure;
+  background-color: white;
 }
-
 
 .bright {
   opacity: 1 !important;
 }
-
 
 .submit {
   --background: blue;
@@ -56,7 +54,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
 }
 
@@ -75,7 +73,6 @@
 }
 
 .modal {
-
   height: 600px;
   margin-top: 20px;
   width: 600px;
@@ -84,10 +81,10 @@
   margin-top: 25vh;
 }
 
-
 .input {
   --color: blue;
 }
-.native-input{
+
+.native-input {
   border: dashed 5px #7f7ffe !important
 }

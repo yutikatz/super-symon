@@ -1,16 +1,18 @@
 import { IonGrid, IonRow, IonCol, IonTitle } from '@ionic/react';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import game from './../images/game.jpg'; 
+import game from './../images/game.jpg';
 import { initialWins, winsList } from '../context/localStorage/reducer/WinsReducer';
 import './../styles/Wins.css';
-import  Player from './../model/Player';
+import Player from './../model/Player';
+import { RouteComponentProps } from 'react-router-dom';
+
 let flag = false;
 
-function Wins(props: any) {
+function Wins(props: RouteComponentProps) { 
     const dispatch = useDispatch();
+    console.log(typeof (props))
     if (!flag) {
-
         dispatch(initialWins());
         flag = true;
     }
