@@ -1,0 +1,90 @@
+#ball1 {
+  margin: 30.49vh 52.294vw;
+  background-color: blue;
+}
+
+#ball3 {
+  margin: 46.02vh 41vw;
+  background-color: red;
+}
+
+#ball2 {
+  margin: 20.81vh 45.674vw;
+  background-color: yellow;
+}
+
+#ball4 {
+  margin: 29.4vh 38.5vw;
+  background-color: green;
+}
+
+#ball5 {
+  margin: 46.02vh 49.318vw;
+  background-color: orange;
+
+}
+
+#wow {
+  position: absolute;
+  margin: 40.02vh 47.682vw;
+  background-color: azure;
+}
+
+
+.bright {
+  opacity: 1 !important;
+}
+
+
+.submit {
+  --background: blue;
+  width: 19vw;
+  margin-inline-start: 2vw;
+  margin-bottom: 25vh;
+}
+
+.img {
+  position: absolute;
+  width: 3vw;
+  height: 6vh;
+  border-radius: 50%;
+  margin: 40.02vh -2.318vw;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+}
+
+.header div {
+  width: 18vw;
+}
+
+.ball {
+  width: 8vw;
+  height: 16vh;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0.5;
+
+}
+
+.modal {
+
+  height: 600px;
+  margin-top: 20px;
+  width: 600px;
+  border: double 5px #7f7ffe;
+  margin-left: 35%;
+  margin-top: 25vh;
+}
+
+
+.input {
+  --color: blue;
+}

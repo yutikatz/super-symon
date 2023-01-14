@@ -1,0 +1,44 @@
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pink-header {
+    color: pink;
+    font-size: 15vh;
+    font-weight: 15vw;
+}
+
+.home {
+    flex: 0 0 auto;
+}
+
+.home-img {
+    width: 3vw;
+    height: 6vh;
+    border-radius: 50%;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: pink;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+.link{
+    font-size: 2vh!important;
+    color:pink;
+}
+.win-list {
+    flex: 1 1 auto;
+}
+
+.win {
+    display: flex;
+    justify-content: space-around;
+}
